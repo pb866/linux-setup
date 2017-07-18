@@ -1,0 +1,13 @@
+[user]
+	name = Peter Bräuer
+	email = peter.brauer@york.ac.uk
+[core]
+	excludesfile = ~/.gitignore_global
+[diff]
+	tool = kdiff3
+[difftool "kdiff3"]
+	path = /usr/bin/kdiff3
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	path = /usr/bin/kdiff3
