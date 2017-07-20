@@ -36,8 +36,8 @@ filetype plugin indent on    " required
 "set statusline+=%{ALEGetStatusLine()}
 "set statusline+=%*
 "let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
-nmap <silent> <C-j> <Plug>(ale_previous_wrap)
-nmap <silent> <C-k> <Plug>(ale_next_wrap)
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 set whichwrap+=h,l,<,>,[,]
 set backspace=indent,eol,start
