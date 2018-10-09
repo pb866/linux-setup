@@ -2,28 +2,33 @@
 # DELUXE-USR-LOCAL-BIN-INSERT
 # (do not remove this comment)
 ##
-export PATH=$PATH:/Users/peter/Applications/bin:/usr/local/bin:/Applications/bin/
+export PATH="/Users/peter/anaconda/bin:/usr/bin:/usr/local/bin:/Applications/bin/:$PATH:/opt/local/bin/"
+export TMPDIR="/Users/peter/.tmp"
 #
 
 # aliases for navigation:
-alias cd..='cd ..'
-alias cd2='cd ../..'
-alias cd3='cd ../../..'
-alias cd4='cd ../../../..'
-alias cd5='cd ../../../../..'
-alias cd6='cd ../../../../../..'
+alias -- -='cd -'
+alias .='cd'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias grep='grep -in'
+/() { cd /; }
 
-alias prot='cd ~/Google\ Drive/York/MAGNIFY/Photolysis/Protocol/GECKO/GECKOprot/KPP/'
-alias tuv='cd ~/Google\ Drive/York/MAGNIFY/Photolysis/TUV/TUV_MCM4.0/SRC5.2.1/'
-alias lst='cd ~/Google\ Drive/York/MAGNIFY/Photolysis/Protocol/MCM4/PHOTlist/'
-alias dsm='cd ~/Google\ Drive/York/MAGNIFY/DSMACC/DSMACC/'
-alias t2d='cd ~/Google\ Drive/York/MAGNIFY/DSMACC/DSMACCtools/TUV2DSMACC/'
-alias dt='cd ~/Google\ Drive/York/MAGNIFY/DSMACC/DSMACCtools/'
+alias prot='cd ~/Drive/York/MAGNIFY/Photolysis/Protocol/GECKO/GECKOprot/KPP/'
+alias tuv='cd ~/Drive/York/MAGNIFY/Photolysis/TUV/TUV_MCM4.0/SRC5.2.x/'
+alias lst='cd ~/Drive/York/MAGNIFY/Photolysis/Protocol/MCM4/PHOTlist/'
+alias dsm='cd ~/Drive/York/MAGNIFY/DSMACC/DSMACC/'
+alias t2d='cd ~/Drive/York/MAGNIFY/DSMACC/DSMACCtools/TUV2DSMACC/'
+alias dt='cd ~/Drive/York/MAGNIFY/DSMACC/DSMACCtools/'
+alias eul='cd ~/Documents/EULER'
 
 # shortcuts
 alias vim='/Applications/vim8.0/bin/vim'
 alias vim7='/usr/bin/vim'
 alias gcc='/opt/local/bin/gcc-mp-6'
+alias atom='/Applications/Atom.app/Contents/MacOS/Atom'
 
 # Same colour schemes in tmux:
 # alvim() {

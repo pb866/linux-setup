@@ -1,6 +1,6 @@
 [user]
 	email = pb866@york.ac.uk
-	name = Peter Bräuer
+	name = Peter Bräuer
 [core]
 	excludesfile = /Users/peter/.gitignore_global
 [difftool "sourcetree"]
@@ -23,3 +23,8 @@
 	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
 [mergetool]
 	prompt = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

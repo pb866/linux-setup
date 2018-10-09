@@ -15,6 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'w0rp/ale'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'SimpylFold'
+Plugin 'JuliaEditorSupport/julia-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -38,6 +39,14 @@ filetype plugin indent on    " required
 "let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+" Do not lint TUV files.
+"let g:ale_pattern_options = {
+"\ '.*/Photolysis/TUV/.*\.f$': {'ale_linters': ['']},
+"\}
+let g:ale_pattern_options = {
+\   '\.f': {'ale_enabled': 0},
+\}
+"let g:ale_linters = {'fortran': []}
 
 set whichwrap+=h,l,<,>,[,]
 set backspace=indent,eol,start
@@ -142,8 +151,8 @@ nnoremap <leader>s :set spell!<CR> " toggle spell check on/off
 nnoremap <leader>f z=              " show list with suggestions to choose from
 
 " even nicer FORTRAN formatting smarttab with CTRL+e in normal mode
-nnoremap <leader>e gg=G:%s/  ELSE/   ELSE/gie<CR>:%s/  CASE/   CASE/gie<CR>:%s/^[ ]*!/!/gie<CR>
-    \ <Leader>,
+" nnoremap <leader>e gg=G:%s/  ELSE/   ELSE/gie<CR>:%s/  CASE/   CASE/gie<CR>
+"     \ <Leader>,
 " :%s/  end/  END/ge<CR>:%s/  case/  CASE/ge<CR>:%s/  select/  SELECT/ge<CR>
 "    \:%s/  if/  IF/ge<CR><CR><
 
